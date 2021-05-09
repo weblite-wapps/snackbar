@@ -1,0 +1,99 @@
+{
+  "name": "@web-lite/snackbar",
+  "version": "0.0.1",
+  "private": false,
+  "description": "React easy snack-bar",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "sideEffects": false,
+  "files": [
+    "build/",
+    "esm/",
+    "src/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Amir.H Ebrahimi",
+    "email": "amirhosseinebrahimi77@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weblite-wapps/snackbar"
+  },
+  "bugs": {
+    "url": "https://github.com/weblite-wapps/snackbar/issues"
+  },
+  "homepage": ".",
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "yarn lint --fix",
+    "dev": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "full:build": "react-scripts build",
+    "clean": "rimraf lib esm"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn lint && yarn clean && yarn build"
+    }
+  },
+  "lint-staged": {
+    "src/**/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17.0.0",
+    "react-dom": "^16.8.0  || ^17.0.0",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2"
+  },
+  "dependencies": {
+    "react-toastify": "^7.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "7.13.14",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/preset-env": "7.13.12",
+    "@babel/preset-react": "7.13.13",
+    "@babel/preset-typescript": "7.13.0",
+    "babel-core": "6.26.3",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-dynamic-import-node": "2.3.3",
+    "eslint": "7.23.0",
+    "eslint-config-prettier": "7.2.0",
+    "eslint-config-react-app": "6.0.0",
+    "eslint-plugin-flowtype": "5.6.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.23.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "husky": "6.0.0",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "rimraf": "3.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
