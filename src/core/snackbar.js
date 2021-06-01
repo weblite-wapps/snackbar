@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify'
-import { globals } from '../helpers'
+import { globals } from '../helpers/index'
 
-import * as SnackBars from '../components/snackbars'
+import * as SnackBars from '../components/snackbars/index'
 
 const mergeConfig = config => ({
   ...globals.CONFIG,

@@ -1,5 +1,5 @@
 import { toast } from 'react-toastify'
-import CloseButton from '../components/close-button'
+import CloseButton from '../components/close-button/index'
 export const SNACKBAR_POSITIONS = toast.POSITION
 export const SNACKBAR_TYPES = toast.TYPE
 

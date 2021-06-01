@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": false,
   "description": "React easy snack-bar",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "build/index.js",
+  "module": "build/index.js",
   "sideEffects": false,
   "files": [
     "src/"
@@ -29,9 +29,11 @@
     "lint": "eslint src/**/*.js",
     "lint:fix": "yarn lint --fix",
     "dev": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
-    "full:build": "react-scripts build",
-    "clean": "rimraf lib esm"
+    "react:cheap-build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "react:build": "react-scripts build",
+    "prebuild": "yarn clean",
+    "build": "rollup -c",
+    "clean": "rimraf build lib esm"
   },
   "husky": {
     "hooks": {
@@ -46,11 +48,11 @@
     ]
   },
   "peerDependencies": {
-    "react": "^16.8.0  || ^17.0.0",
-    "react-dom": "^16.8.0  || ^17.0.0",
-    "clsx": "^1.1.1",
     "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2"
+    "@material-ui/icons": "^4.11.2",
+    "clsx": "^1.1.1",
+    "react": "^16.8.0  || ^17.0.0",
+    "react-dom": "^16.8.0  || ^17.0.0"
   },
   "dependencies": {
     "react-toastify": "^7.0.4"
@@ -61,9 +63,13 @@
     "@babel/preset-env": "7.13.12",
     "@babel/preset-react": "7.13.13",
     "@babel/preset-typescript": "7.13.0",
-    "babel-core": "6.26.3",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@rollup/plugin-babel": "^5.3.0",
+    "babel-core": "^6.26.3",
     "babel-eslint": "10.1.0",
     "babel-plugin-dynamic-import-node": "2.3.3",
+    "babel-runtime": "^6.26.0",
     "eslint": "7.23.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-config-react-app": "6.0.0",
@@ -76,12 +82,13 @@
     "husky": "6.0.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
-    "rimraf": "3.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2"
+    "rimraf": "3.0.2",
+    "rollup": "^2.50.5",
+    "rollup-plugin-scss": "^2.6.1",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "browserslist": {
     "production": [
