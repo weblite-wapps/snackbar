@@ -1,11 +1,8 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+// import React from 'react'
+// import ReactDOM from 'react-dom'
 
-import App from './example/app'
+// import App from './example/app'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
-)
+// ReactDOM.render(<React.StrictMode><App /></React.StrictMode>,document.getElementById('root'))
+
+export * from './core'
