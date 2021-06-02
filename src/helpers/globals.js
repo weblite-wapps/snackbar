@@ -5,7 +5,7 @@ export const SNACKBAR_TYPES = toast.TYPE
 
 export const CONFIG = {
   position: SNACKBAR_POSITIONS.BOTTOM_CENTER,
-  autoClose: 3200_000, // android standard
+  autoClose: 3200, // android standard
   closeOnClick: false,
   hideProgressBar: true,
   closeButton: CloseButton,
