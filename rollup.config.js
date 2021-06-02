@@ -16,7 +16,7 @@ export default {
   ],
   plugins: [
     scss({
-      output: 'build/reset.css',
+      output: 'style.min.css',
       outputStyle: 'compressed',
     }),
     babel({
