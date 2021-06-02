@@ -34,8 +34,7 @@
     "react:build": "react-scripts build",
     "prebuild": "yarn clean",
     "build": "rollup -c",
-    "clean": "rimraf build lib esm",
-    "publish": "np --branch master"
+    "clean": "rimraf build lib esm style.min.css"
   },
   "husky": {
     "hooks": {
