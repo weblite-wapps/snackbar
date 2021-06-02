@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { IconButton } from '@material-ui/core'
 // style
 import useStyle from './close-button.style'

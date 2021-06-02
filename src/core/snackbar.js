@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { toast } from 'react-toastify'
 import { globals } from '../helpers/index'
 

@@ -1,3 +1,4 @@
+import * as React from 'react'
 import SystemSnackBarScheme from '../scheme/system'
 // const
 import { SEVERITY_TO_TITLE } from './system.local'
