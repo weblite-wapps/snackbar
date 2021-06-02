@@ -32,15 +32,17 @@ You may need to install every dependencies which has not been installed yet
 
 🩰 Hopefully it won't need any thing to install
 
-
 ## Example
+
 ```jsx
 import SnackbarContainer, { sb, globals } from '@web-lite/snackbar'
+import '@web-lite/snackbar/style.min.css'
 
 export default function App() {
   const content = {
     title: 'Poison Quotes',
-    message: 'Cheers for everyone who is man, cause everyone who is man, is differnet from every man.',
+    message:
+      'Cheers for everyone who is man, cause everyone who is man, is different from every man.',
     config: {
       position: globals.SNACKBAR_POSITIONS.TOP_CENTER,
       closeOnClick: true,
