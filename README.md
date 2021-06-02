@@ -36,7 +36,9 @@ You may need to install every dependencies which has not been installed yet
 
 ```jsx
 import SnackbarContainer, { sb, globals } from '@web-lite/snackbar'
-import '@web-lite/snackbar/style.min.css'
+import '@web-lite/snackbar/build/style.min.css'
+// if you are using v0.0.10
+// import '@web-lite/snackbar/style.min.css'
 
 export default function App() {
   const content = {
