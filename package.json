@@ -7,8 +7,7 @@
   "module": "build/index.js",
   "sideEffects": false,
   "files": [
-    "build/",
-    "style.min.css"
+    "build/"
   ],
   "publishConfig": {
     "access": "public"
@@ -34,7 +33,7 @@
     "react:build": "react-scripts build",
     "prebuild": "yarn clean",
     "build": "rollup -c",
-    "clean": "rimraf build lib esm style.min.css"
+    "clean": "rimraf build lib esm"
   },
   "husky": {
     "hooks": {
