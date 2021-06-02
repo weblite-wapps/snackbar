@@ -8,7 +8,7 @@
   }
 }
 .Toastify__toast {
-  font-family: iranyekan;
+  font-family: inherit;
   border-radius: 25px;
 }
 
