@@ -7,7 +7,8 @@
   "module": "build/index.js",
   "sideEffects": false,
   "files": [
-    "build/"
+    "build/",
+    "style.min.css"
   ],
   "publishConfig": {
     "access": "public"
