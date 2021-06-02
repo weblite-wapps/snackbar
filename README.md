@@ -35,7 +35,7 @@ You may need to install every dependencies which has not been installed yet
 
 ## Example
 ```jsx
-import SnackbarContainer, { sb, globals } from '../core'
+import SnackbarContainer, { sb, globals } from '@web-lite/snackbar'
 
 export default function App() {
   const content = {
