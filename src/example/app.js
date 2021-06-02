@@ -1,4 +1,4 @@
-import SnackbarContainer, { sb, globals } from '../core'
+import SnackbarContainer, { sb, globals } from '../index.prod'
 
 export default function App() {
   const content = {
